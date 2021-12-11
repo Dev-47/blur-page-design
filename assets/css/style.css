@@ -205,7 +205,7 @@ h3 {
 
 /* Resposiveness */
 
-@media (max-width: 468px) {
+@media (max-width: 600px) {
   .whole {
     overflow: hidden;
     /* height: 95vh; */
