@@ -4,36 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c1c90fc475.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Blur Page Design</title>
   </head>
   <body>
-    <div class="left-right">
-      <section class="left-section">
-          <span class="logo"></span>
+    <div class="whole">
+      <div class="left-right">
+        <section class="left-section">
           <div class="nav">
-            <ul>
+            <span class="logo">
+              <img src="./assets/img/logo.png" alt="" />
+            </span>
+
+            <ul class="nav-links">
               <li><a href="#">Home</a></li>
               <li><a href="#">Product</a></li>
               <li><a href="#">Customize</a></li>
               <li><a href="#">About Us</a></li>
             </ul>
           </div>
-          <div>
+          <div class="page-content">
+            <div class="flex flex-col justify-between h-2-5">
               <h1>Omah Smart</h1>
               <h3>Create a Ecosystem In Your Home</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero deleniti, soluta, sequi ipsam ad cumque, exercitationem assumenda neque illo illum id provident nam nesciunt modi atque alias eius veritatis perferendis.</p>
+              <p class="light-text py-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                deleniti, soluta, sequi ipsam ad cumque, exercitationem
+                assumenda neque illo illum id provident nam nesciunt modi atque
+                alias eius veritatis perferendis.
+              </p>
+              <a href="#" class="btn"
+                >connect now
+                <span class="btn-icon"
+                  ><i class="fas fa-chevron-right"></i
+                  ><i class="fas fa-chevron-right"></i
+                  ><i class="fas fa-chevron-right faded-icon"></i></span
+              ></a>
+            </div>
           </div>
-          <a href="#" class="btn">connect now <span class="icon"></span></a>
-      </section>
-      <section class="right-section">
-          <img src="/" alt="holding phone with hands">
+        </section>
+        <section class="right-section">
+          <img
+            src="./assets/img/hands.png"
+            alt="holding phone with hands"
+            class="hands-img"
+          />
+        </section>
+      </div>
+
+      <section class="bottom-section">
+        <div class="bottom-section-content">
+          <span class="icon center"><i class="fas fa-wifi"></i></span>
+          <p class="bold-text">how we connection your device controller</p>
+          <p class="light-text">
+            connect via smartphone and find many conveniences in it, life is
+            easier
+          </p>
+          <span class="icon center"><i class="fas fa-chevron-right"></i></span>
+        </div>
       </section>
     </div>
-    <section class="bottom-section">
-        <span class="icon"></span>
-        <p class="bold-text">how we connection your device controller</p>
-        <p class="light-text">connect via smartphone and find many conveniences in it, life is easier</p>
-        <span class="icon"></span>
-    </section>
   </body>
 </html>
