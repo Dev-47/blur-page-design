@@ -1,5 +1,7 @@
 # Blur Page Design
 
-https://dev-47-blur-design.netlify.app/
+Preview on [netlify](https://dev-47-blur-design.netlify.app/)
 
-[UI/UX Prototype](./ui/ui.jpeg)
+UI/UX Prototype
+
+![UI/UX Prototype](./ui/ui.jpeg)
