@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Source Sans 3", sans-serif;
+  /* overflow: hidden; */
 }
 
 ul {
@@ -34,14 +35,14 @@ a {
 }
 
 .left-section {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background: rgb(30, 104, 103);
   background: linear-gradient(
     to bottom right,
     rgba(30, 104, 103, 1) 35%,
-    rgba(113, 186, 184, 1) 100%
+    rgb(81, 150, 147) 100%
   );
   color: white;
   padding: 2rem 5rem;
@@ -49,7 +50,6 @@ a {
 
 .nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -57,6 +57,9 @@ a {
 .logo {
   width: 2rem;
   height: 2rem;
+  background-color: rgba(29, 175, 107, 0.9);
+  padding: 0.1rem;
+  border-radius: 0.5rem;
 }
 
 .logo img {
@@ -85,7 +88,7 @@ h1 {
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: normal;
   line-height: 3.5rem;
 }
@@ -95,12 +98,19 @@ h3 {
 }
 
 .right-section {
-  width: 50%;
-  background: rgb(30, 104, 103, 0.9);
+  width: 100%;
+  background: rgb(30, 104, 103);
+  background: linear-gradient(
+    135deg,
+    rgb(154, 248, 245) 10% rgba(30, 104, 103, 1) 100%
+  );
 }
 
-img {
-  width: 100%;
+.hands-img {
+  position: absolute;
+  bottom: 0;
+  right: 0.5%;
+  width: auto;
   height: 100%;
 }
 
@@ -110,11 +120,25 @@ img {
   left: 10%;
   width: 80%;
   margin: 0 auto;
-  padding: 2rem;
-  background: rgb(30, 104, 103);
-  backdrop-filter: blur(30);
+  padding: 3rem 3rem;
+  background: rgba(90, 168, 167, 0.65);
+  backdrop-filter: blur(2px);
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
+  color: white;
+}
+
+.bottom-section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5;
+}
+
+.icon {
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgba(34, 34, 34, 0.5);
 }
 
 .page-content {
@@ -122,13 +146,21 @@ img {
 }
 
 .btn {
-  background-color: lightgreen;
+  background-color: rgba(29, 175, 107, 0.9);
   color: white;
   border-radius: 15px;
-  width: 10rem;
+  width: 12rem;
   text-transform: capitalize;
   font-weight: 600;
   text-align: center;
+}
+
+.btn-icon {
+  margin-left: 1rem;
+}
+
+.faded-icon {
+  color: #ccc;
 }
 
 /* utils */
@@ -151,4 +183,170 @@ img {
 
 .py-2 {
   padding: 2rem 0;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+.icon-bottom {
+  display: none;
+}
+
+.icon-hide {
+  display: none;
+}
+
+.display-none {
+  display: none;
+}
+
+/* Resposiveness */
+
+@media (max-width: 600px) {
+  .whole {
+    overflow: hidden;
+    /* height: 95vh; */
+  }
+
+  .left-section {
+    padding: 0;
+  }
+
+  .logo {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+
+  .nav {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.1rem;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .nav-links.active {
+    width: 20rem;
+  }
+
+  .page-content {
+    padding: 2rem 1rem;
+    display: grid;
+    place-content: center;
+    place-items: center;
+  }
+
+  .right-section {
+    display: none;
+  }
+
+  .hands-img {
+    display: none;
+  }
+
+  .bottom-section {
+    padding: 2rem 1rem;
+    height: 2.3rem;
+  }
+
+  .transition {
+    transition: 0.5s ease-in-out;
+  }
+
+  .icon-up {
+    margin-bottom: 0.5rem;
+  }
+
+  .icon-bottom, .display-none {
+    display: block;
+  }
+
+  .icon-hide {
+    display: none;
+  }
+
+  .bottom-section-content {
+    gap: 0.8rem;
+  }
+
+  /* nav menu  */
+  .menu-icon,
+  .menu-icon:before,
+  .menu-icon:after {
+    display: inline-block;
+    background-color: white;
+    height: 0.35rem;
+    width: 1.85rem;
+    transition: transform 0.5s cubic-bezier(0.01, 0.87, 0.36, 0.99);
+    transform-origin: left;
+    border-radius: 2px;
+  }
+
+  .menu-icon:before,
+  .menu-icon:after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  .menu-icon {
+    position: relative;
+    transition: background-color 5;
+    animation: fadeIn 1s cubic-bezier(0.01, 0.87, 0.36, 0.99) 0s 1 normal
+      forwards;
+  }
+
+  .menu-icon:before {
+    top: 175%;
+  }
+
+  .menu-icon:after {
+    bottom: 175%;
+  }
+
+  .menu-icon.active {
+    animation: fadeOut 0.5s cubic-bezier(0.01, 0.87, 0.36, 0.99) 0s 1 normal
+      forwards;
+  }
+
+  @keyframes fadeOut {
+    from {
+      background-color: white;
+    }
+    to {
+      background-color: rgba(255, 74, 74, 0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      background-color: rgba(255, 74, 74, 0);
+    }
+    to {
+      background-color: white;
+    }
+  }
+
+  .menu-icon.active:before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-icon.active:after {
+    transform: rotate(45deg);
+  }
+
 }
